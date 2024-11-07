@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A page for all my information and contact info! - Ian Rich">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+  <title>Ian Rich</title>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("FyGqvTehmRZpSqo_T"); // Replace with your EmailJS public key
+    })();
+  </script>
+
+  <!-- JavaScript for handling form submission -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      const contactForm = document.querySelector(".contact-form");
+
+      contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Collect form data
+        const formData = {
+          name: contactForm.querySelector("input[name='name']").value,
+          email: contactForm.querySelector("input[name='email']").value,
+          message: contactForm.querySelector("textarea[name='message']").value
+        };
+
+        // Send form data with EmailJS
+        emailjs.send("service_1vkoyk6", "template_2pkixrl", formData)
+          .then(() => {
+            alert("Message sent successfully!");
+            contactForm.reset(); // Clear the form
+          })
+          .catch((error) => {
+            alert("There was an error sending your message.");
+            console.error("Error:", error);
+          });
+      });
+    });
+  </script>
+
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    /* Layout */
+    header, section { padding: 2em 5%; }
+    header { text-align: center; background: #333; color: white; }
+    .content { max-width: 1200px; margin: 0 auto; }
+
+    /* Sections */
+    h2 { color: #333; margin-bottom: 0.5em; text-align: center;}
+    .project, .skill { margin-bottom: 1.5em; }
+    .project-title, .skill-title, .education-title { font-weight: bold; }
+
+    /* Introduction */
+    .text-space { flex: 1 1 calc(33.333% - 1em); padding: 1em; background: #f7f7f7; border-radius: 8px; }
+
+    /* Eduaction */
+    .education-grid { display: flex; flex-wrap: wrap; gap: 1.5em; }
+    .education { flex: 1 1 calc(33.333% - 1em); padding: 1em; background: #f7f7f7; border-radius: 8px; }
+    .education a { color: #0066cc; text-decoration: none; }
+
+    /* Project Grid */
+    .project-grid { display: flex; flex-wrap: wrap; gap: 1.5em; }
+    .project { flex: 1 1 calc(33.333% - 1em); padding: 1em; background: #f7f7f7; border-radius: 8px; }
+    .project a { color: #0066cc; text-decoration: none; }
+
+    /* Skills Section */
+    .skill-grid { display: flex; flex-wrap: wrap; gap: 1em; }
+    .skill {
+      flex: 1 1 calc(25% - 1em);
+      padding: 1em;
+      background: #f7f7f7;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .skill i {
+      color: #333;
+    }
+
+    /* Contact Section */
+    .contact-form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; }
+    .contact-form input, .contact-form textarea { padding: 0.5em; margin: 0.5em 0; border: 1px solid #ccc; border-radius: 4px; }
+    .contact-form button { padding: 0.7em; border: none; background: #333; color: white; border-radius: 4px; cursor: pointer; }
+
+    footer {
+      background-color: #333; /* Matches header background color */
+      color: white; /* Matches header text color */
+      text-align: center;
+      padding: 1em 0; /* Adds spacing around the text */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Ian Rich</h1>
+  <p>Welcome to my personal website!</p>
+  <p>Here you can find my projects, skills, and contact information.</p>
+</header>
+
+<!-- Seperate -->
+<br>
+
+<section id="intro" class="content">
+  <h2>Introduction</h2>
+  <div class="text-space">
+    <p>Hi! I'm Ian Rich. I've gained a lot of knowledge from working with a wide array of technology, largely with software, hardware, and the internet itself! <br><br>I currently do freelance work for minecraft plugin and server development, but I'm looking for a solid part time job to gain experience that will help me later in my career. <br><br>If you would like to contact me, you can fill in the form at the bottom of this page which will send an email directly to me!<br><br>Thanks for reading and have a great day!<br> - Ian Rich</p>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="content">
+  <h2>Education</h2>
+  <div class="education-grid">
+    <div class="education">
+      <p class="education-title">McHenry County College (2024-???)</p>
+      <p>At MCC I am in the process of gaining my Associates of Science, allowing me to later achieve my degree.</p>
+    </div>
+    <div class="education">
+      <p class="education-title">Crystal Lake South H.S. (2020-2024)</p>
+      <p>At Crystal Lake South I achieved my High School diploma, I took several AP classes in Computer Science here.</p>
+    </div>
+    <!-- Add more project blocks as needed -->
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="content">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project">
+      <p class="project-title">Kynos</p>
+      <p>Kynos is a simple program that allows you to build simple, easy to use, web applications.</p>
+      <a href="https://github.com/KaboomB52/Kynos">View on GitHub</a>
+    </div>
+    <div class="project">
+      <p class="project-title">Hermes</p>
+      <p>Hermes is a simple interface for Redis databases on Java and Kotlin platforms.</p>
+      <a href="https://github.com/KaboomB52/Hermes">View on GitHub</a>
+    </div>
+    <!-- Add more project blocks as needed -->
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="content">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="skill">
+      <i class="fab fa-java fa-3x"></i> <!-- Java Icon -->
+      <p><b>Java</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-css3-alt fa-3x"></i> <!-- CSS Icon -->
+      <p><b>CSS</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-html5 fa-3x"></i> <!-- HTML Icon -->
+      <p><b>HTML</b></p>
+    </div>
+    <!-- Add more skills as needed -->
+  </div>
+  <div class="skill-grid">
+    <div class="skill">
+      <i class="fab fa-github fa-3x"></i> <!-- GitHub Icon -->
+      <p><b>GitHub</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-git-alt fa-3x"></i> <!-- Git Icon -->
+      <p><b>Git</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-solid fa-cloud fa-3x"></i> <!-- Cloud Icon -->
+      <p><b>Cloud APIs</b></p>
+    </div>
+  </div>
+  <div class="skill-grid">
+    <div class="skill">
+      <i class="fab fa-solid fa-desktop fa-3x"></i> <!-- Jenkins Icon -->
+      <p><b>Troubleshooting</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-linux fa-3x"></i> <!-- GitHub Icon -->
+      <p><b>Linux</b></p>
+    </div>
+    <div class="skill">
+      <i class="fab fa-solid fa-server fa-3x"></i> <!-- GitHub Icon -->
+      <p><b>Server Administration</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="content">
+  <h2>Contact Me</h2>
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div style="align-content:center; text-align: center;">
+    <p style="text-align:center; margin-top:1em;">
+      Or reach me on
+    </p>
+    <a href="https://www.linkedin.com/in/ianarich" target="_blank">LinkedIn</a>
+    <a href="https://github.com/KaboomB52" target="_blank">GitHub</a>
+    <a href="https://t.me/KaboomB52" target="_blank">Telegram</a>
+  </div>
+</section>
+
+</body>
+
+<footer>
+  <p>© Ian Rich 2024</p>
+</footer>
+
+</html>
