@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -7,7 +8,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A page for all my information and contact info! - Ian Rich">
+  <meta name="description" content="My website for information about me!">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -65,6 +66,14 @@
     header { text-align: center; background: #333; color: white; }
     .content { max-width: 1200px; margin: 0 auto; }
 
+    /* PfP */
+    .pfp {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
     /* Sections */
     h2 { color: #333; margin-bottom: 0.5em; text-align: center;}
     .project, .skill { margin-bottom: 1.5em; }
@@ -96,6 +105,11 @@
       color: #333;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     /* Contact Section */
     .contact-form { display: flex; flex-direction: column; max-width: 600px; margin: 0 auto; }
     .contact-form input, .contact-form textarea { padding: 0.5em; margin: 0.5em 0; border: 1px solid #ccc; border-radius: 4px; }
@@ -107,12 +121,14 @@
       text-align: center;
       padding: 1em 0; /* Adds spacing around the text */
     }
+
   </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
+  <img src="pfp.jpg" alt="Me!" class="pfp">
   <h1>Ian Rich</h1>
   <p>Welcome to my personal website!</p>
   <p>Here you can find my projects, skills, and contact information.</p>
@@ -124,7 +140,11 @@
 <section id="intro" class="content">
   <h2>Introduction</h2>
   <div class="text-space">
-    <p>Hi! I'm Ian Rich. I've gained a lot of knowledge from working with a wide array of technology, largely with software, hardware, and the internet itself! <br><br>I currently do freelance work for minecraft plugin and server development, but I'm looking for a solid part time job to gain experience that will help me later in my career. <br><br>If you would like to contact me, you can fill in the form at the bottom of this page which will send an email directly to me!<br><br>Thanks for reading and have a great day!<br> - Ian Rich</p>
+    <p>Hi there! I'm Ian Rich, a passionate tech enthusiast with hands-on experience across software, hardware, and the vast world of the internet. I love diving into different areas of technology and continually expanding my expertise.</p>
+    <br>
+    <p>Right now, I’m working as a freelance developer, primarily focused on creating and enhancing Minecraft plugins and server experiences. However, I’m looking to grow even further and am seeking a part-time role where I can gain deeper, real-world experience to shape my career.</p>
+    <br>
+    <p>If you'd like to reach out, just use the contact form below, and your message will come straight to me. I'd love to connect!</p>
   </div>
 </section>
 
@@ -133,12 +153,12 @@
   <h2>Education</h2>
   <div class="education-grid">
     <div class="education">
-      <p class="education-title">McHenry County College (2024-???)</p>
-      <p>At MCC I am in the process of gaining my Associates of Science, allowing me to later achieve my degree.</p>
+      <p class="education-title">🏫 McHenry County College (2024-???)</p>
+      <p>At MCC I am in the process of gaining my Associates in Science, allowing me to achieve my full degree later.</p>
     </div>
     <div class="education">
-      <p class="education-title">Crystal Lake South H.S. (2020-2024)</p>
-      <p>At Crystal Lake South I achieved my High School diploma, I took several AP classes in Computer Science here.</p>
+      <p class="education-title">🐊 Crystal Lake South H.S. (2020-2024)</p>
+      <p>At Crystal Lake South I achieved my High School diploma, and I took several AP classes in Computer Science here.</p>
     </div>
     <!-- Add more project blocks as needed -->
   </div>
@@ -149,12 +169,12 @@
   <h2>Projects</h2>
   <div class="project-grid">
     <div class="project">
-      <p class="project-title">Kynos</p>
-      <p>Kynos is a simple program that allows you to build simple, easy to use, web applications.</p>
+      <p class="project-title">🌧️ Kynos</p>
+      <p>Kynos is a simple program that allows you to build simple, easy-to-use, web applications.</p>
       <a href="https://github.com/KaboomB52/Kynos">View on GitHub</a>
     </div>
     <div class="project">
-      <p class="project-title">Hermes</p>
+      <p class="project-title">🏇 Hermes</p>
       <p>Hermes is a simple interface for Redis databases on Java and Kotlin platforms.</p>
       <a href="https://github.com/KaboomB52/Hermes">View on GitHub</a>
     </div>
@@ -205,7 +225,7 @@
     </div>
     <div class="skill">
       <i class="fab fa-solid fa-server fa-3x"></i> <!-- GitHub Icon -->
-      <p><b>Server Administration</b></p>
+      <p><b>Server Management</b></p>
     </div>
   </div>
 </section>
@@ -224,9 +244,10 @@
     <p style="text-align:center; margin-top:1em;">
       Or reach me on
     </p>
-    <a href="https://www.linkedin.com/in/ianarich" target="_blank">LinkedIn</a>
-    <a href="https://github.com/KaboomB52" target="_blank">GitHub</a>
-    <a href="https://t.me/KaboomB52" target="_blank">Telegram</a>
+    <a href="https://www.linkedin.com/in/ianarich" target="_blank"><i class="fab fa-brands fa-linkedin fa-2x"></i></a>
+    <a href="https://github.com/KaboomB52" target="_blank"><i class="fab fa-brands fa-github fa-2x"></i></a>
+    <a href="https://t.me/KaboomB52" target="_blank"><i class="fab fa-brands fa-telegram fa-2x"></i></a>
+    <a href="https://x.com/IanRichB52" target="_blank"><i class="fab fa-brands fa-twitter fa-2x"></i></a>
   </div>
 </section>
 
